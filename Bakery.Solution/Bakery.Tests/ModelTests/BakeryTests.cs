@@ -7,18 +7,25 @@ namespace BakeryNameSpaceTests //Change to match Title
   public class BakeryTests
   {
     [TestMethod]
-    public void BreadCost_VerifyCost_5()
+    public void GetBreadCost_VerifyCost_5()
     {
       int value;
-      int breadCost;
+      int breadCost = 5;
       int expectedCost = 5;
 
-      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost(1, 5);
+      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost(1);
 
       Assert.AreEqual(expectedCost, returnedCost);
     }
 
-    // [TestMethod]
-    // public void 
+    [TestMethod]
+    public void GetBreadCost_CalculateQuantityCost_15()
+    {
+      int value;
+      int breadCost = 5;
+      int expectedCost = 15;
+      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost(1);
+      Assert.AreEqual(expectedCost, returnedCost);
+    }
   }
 };
