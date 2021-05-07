@@ -1,10 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BakeryNameSpace;
 
-namespace BakeryNameSpaceTests //Change to match Title
+namespace BakeryNameSpaceTests
 {
   [TestClass]
-  public class BakeryTests
+  public class BreadTests
   {
     [TestMethod]
     public void GetBreadCost_VerifyCost_5()
@@ -46,6 +46,22 @@ namespace BakeryNameSpaceTests //Change to match Title
       int expectedCost = 30;
       int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(8);
       Assert.AreEqual(expectedCost, totalBreadCost);
+    }
+  }
+
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void GetPastryCost_VerifyCost_2()
+    {
+      int input;
+      int pastryCost = 2;
+      int expectedCost = 2;
+
+      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(0);
+
+      Assert.AreEqual(expectedCost, totalPastryCost);
     }
   }
 };
