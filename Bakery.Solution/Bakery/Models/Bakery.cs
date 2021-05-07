@@ -6,8 +6,6 @@ namespace BakeryNameSpace
 {
   public class BreadCost
   {
-
-    // int userInput;
     public static int GetBreadCost(int userInputB)
     {
       int breadNum = userInputB;
@@ -22,7 +20,6 @@ namespace BakeryNameSpace
 
   public class PastryCost
   {
-    // int pQuantity;
     public static int GetPastryCost(int userInputP)
     {
       int pQuantity = userInputP;
@@ -37,8 +34,6 @@ namespace BakeryNameSpace
   {
     public static int GetTotalCost(int totalPastryCost, int totalBreadCost)
     {
-      // int finalBreadPrice = BreadCost.GetBreadCost(userInputB);
-      // int finalPastryPrice = PastryCost.GetPastryCost(userInputP);
       int finalPrice = totalPastryCost + totalBreadCost;
 
       return finalPrice;
