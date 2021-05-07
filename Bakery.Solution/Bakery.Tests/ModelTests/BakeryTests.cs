@@ -65,13 +65,25 @@ namespace BakeryNameSpaceTests
     }
 
     [TestMethod]
-    public void GetPastryCost_VerifyDiscount_10()
+    public void GetPastryCost_VerifyDiscount_15()
     {
       int input;
       int pastryCost = 2;
-      int expectedCost = 10;
+      int expectedCost = 15;
 
-      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(6);
+      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(9);
+
+      Assert.AreEqual(expectedCost, totalPastryCost);
+    }
+
+    [TestMethod]
+    public void GetPastryCost_VerifyAccuratePricing_12()
+    {
+      int input;
+      int pastryCost = 2;
+      int expectedCost = 12;
+
+      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(7);
 
       Assert.AreEqual(expectedCost, totalPastryCost);
     }
