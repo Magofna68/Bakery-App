@@ -44,7 +44,7 @@ namespace BakeryNameSpaceTests //Change to match Title
       int value;
       int breadCost = 5;
       int expectedCost = 30;
-      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(0);
+      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(8);
       Assert.AreEqual(expectedCost, totalBreadCost);
     }
   }
