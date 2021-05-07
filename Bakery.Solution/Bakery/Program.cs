@@ -7,25 +7,36 @@ public class Program
   public static void Main()
   {
     Write("\n");
+    Write("\n");
+    BackgroundColor = ConsoleColor.Black;
+    Write("\n");
     WriteLine("Welcome to our Bakery!");
-    Write("\n");
     WriteLine("We have both bread & pastry options available for you.");
-    WriteLine("Bread will cost you $5 per loaf, or buy 2 get one free!");
-    WriteLine("Pastries will be $2 each or 3 for $5!");
     Write("\n");
-    WriteLine("Please enter the quantity of loaves of bread you'd like to purchase : ");
+    ForegroundColor = ConsoleColor.Yellow;
+    WriteLine("- Bread: $5 per loaf, or buy 2 get one free!");
+    Write("\n");
+    BackgroundColor = ConsoleColor.Black;
+    WriteLine("- Pastries: $2 each, or 3 for $5!");
+    Write("\n");
+    ForegroundColor = ConsoleColor.White;
+    WriteLine("Please enter the quantity (loaves) you'd like to purchase : ");
+    Write("\n");
+    BackgroundColor = ConsoleColor.Black;
     int userInputB = Convert.ToInt16(ReadLine());
     var bCost = BreadCost.GetBreadCost(userInputB);
+    Write("\n");
     WriteLine("Perfect! And the amount of pastries? : ");
+    Write("\n");
     int userInputP = Convert.ToInt16(ReadLine());
     var pCost = PastryCost.GetPastryCost(userInputP);
-    // GetPastryCost(userInputP);
+    Write("\n");
     WriteLine("Thank you.");
-    // TotalCost Total = new TotalCost();
-    // Total.GetTotalCost();
     var finalPrice = TotalCost.GetTotalCost(pCost, bCost);
-    Write("Your total ends up being: $");
-    Write(finalPrice);
+    ForegroundColor = ConsoleColor.Blue;
+    Write("\n");
+    Write("Your total ends up being: ${0} ", finalPrice);
     Read();
+    Main();
   }
 }
