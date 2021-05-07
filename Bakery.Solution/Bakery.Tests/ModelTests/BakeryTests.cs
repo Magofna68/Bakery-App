@@ -9,12 +9,16 @@ namespace BakeryNameSpaceTests //Change to match Title
     [TestMethod]
     public void BreadCost_VerifyCost_5()
     {
-      char input = 'b';
+      int value;
+      int breadCost;
       int expectedCost = 5;
 
-      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost('b');
+      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost(1, 5);
 
       Assert.AreEqual(expectedCost, returnedCost);
     }
+
+    // [TestMethod]
+    // public void 
   }
-}
+};
