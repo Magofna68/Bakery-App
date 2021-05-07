@@ -7,9 +7,14 @@ namespace BakeryNameSpaceTests //Change to match Title
   public class BakeryTests
   {
     [TestMethod]
-    // public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    // {
-    //   // any necessary logic to prep for test; instantiating new classes, etc.
-    //   Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+    public void BreadCost_VerifyCost_5()
+    {
+      char input = 'b';
+      int expectedCost = 5;
+
+      int returnedCost = BakeryNameSpace.BreadCost.GetBreadCost('b');
+
+      Assert.AreEqual(expectedCost, returnedCost);
+    }
   }
 }
