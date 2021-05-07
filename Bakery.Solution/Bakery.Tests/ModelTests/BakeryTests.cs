@@ -59,7 +59,19 @@ namespace BakeryNameSpaceTests
       int pastryCost = 2;
       int expectedCost = 2;
 
-      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(0);
+      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(1);
+
+      Assert.AreEqual(expectedCost, totalPastryCost);
+    }
+
+    [TestMethod]
+    public void GetPastryCost_VerifyDiscount_10()
+    {
+      int input;
+      int pastryCost = 2;
+      int expectedCost = 10;
+
+      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(6);
 
       Assert.AreEqual(expectedCost, totalPastryCost);
     }
