@@ -10,8 +10,8 @@ public class Program
     Write("\n");
     BackgroundColor = ConsoleColor.Black;
     Write("\n");
-    WriteLine("Welcome to our Bakery!");
-    WriteLine("We have both bread & pastry options available for you.");
+    WriteLine("Welcome to Pierre's Bakery!");
+    WriteLine("At Pierre's we have both bread & pastry options available for you.");
     Write("\n");
     ForegroundColor = ConsoleColor.Yellow;
     WriteLine("- Bread: $5 per loaf, or buy 2 get one free!");
