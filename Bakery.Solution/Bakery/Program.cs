@@ -1,4 +1,4 @@
-using BakeryNameSpace;
+using Bakery.Models;
 using System;
 using static System.Console;
 
@@ -23,20 +23,27 @@ public class Program
     WriteLine("Please enter the quantity (loaves) you'd like to purchase : ");
     Write("\n");
     BackgroundColor = ConsoleColor.Black;
-    int userInputB = Convert.ToInt16(ReadLine());
-    var bCost = BreadCost.GetBreadCost(userInputB);
+    int breadNum = int.Parse(ReadLine());
+
+    // var bCost = BreadCost.GetBreadCost(userInputB);
     Write("\n");
     WriteLine("Perfect! And the amount of pastries? : ");
     Write("\n");
-    int userInputP = Convert.ToInt16(ReadLine());
-    var pCost = PastryCost.GetPastryCost(userInputP);
+    int pQuantity = int.Parse(ReadLine());
+    // var pCost = PastryCost.GetPastryCost(userInputP);
     Write("\n");
     WriteLine("Thank you.");
-    var finalPrice = TotalCost.GetTotalCost(pCost, bCost);
-    ForegroundColor = ConsoleColor.Blue;
-    Write("\n");
-    Write("Your total ends up being: ${0} ", finalPrice);
-    Read();
-    Main();
+    if (breadNum >= 0 && pQuantity >= 0)
+    {
+      Bread userSelectedB = new Bread(breadNum, 5);
+      Pastry userSelectedP = new Pastry(pQuantity, 2);
+      int finalPrice = (userSelectedB.GetBreadCost(breadNum) + userSelectedP.GetPastryCost(pQuantity));
+      // var finalPrice = TotalCost.GetTotalCost(pCost, bCost);
+      ForegroundColor = ConsoleColor.Blue;
+      Write("\n");
+      Write("Your total ends up being: ${0} ", finalPrice);
+      Read();
+      Main();
+    }
   }
 }
