@@ -25,12 +25,10 @@ public class Program
     BackgroundColor = ConsoleColor.Black;
     int breadNum = int.Parse(ReadLine());
 
-    // var bCost = BreadCost.GetBreadCost(userInputB);
     Write("\n");
     WriteLine("Perfect! And the amount of pastries? : ");
     Write("\n");
     int pQuantity = int.Parse(ReadLine());
-    // var pCost = PastryCost.GetPastryCost(userInputP);
     Write("\n");
     WriteLine("Thank you.");
     if (breadNum >= 0 && pQuantity >= 0)
@@ -38,7 +36,6 @@ public class Program
       Bread userSelectedB = new Bread(breadNum, 5);
       Pastry userSelectedP = new Pastry(pQuantity, 2);
       int finalPrice = (userSelectedB.GetBreadCost(breadNum) + userSelectedP.GetPastryCost(pQuantity));
-      // var finalPrice = TotalCost.GetTotalCost(pCost, bCost);
       ForegroundColor = ConsoleColor.Blue;
       Write("\n");
       Write("Your total ends up being: ${0} ", finalPrice);
