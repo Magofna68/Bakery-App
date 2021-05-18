@@ -35,7 +35,7 @@ public class Program
     {
       Bread userSelectedB = new Bread(breadNum, 5);
       Pastry userSelectedP = new Pastry(pQuantity, 2);
-      int finalPrice = (userSelectedB.GetBreadCost(breadNum) + userSelectedP.GetPastryCost(pQuantity));
+      var finalPrice = (Bread.GetBreadCost(breadNum) + Pastry.GetPastryCost(pQuantity));
       ForegroundColor = ConsoleColor.Blue;
       Write("\n");
       Write("Your total ends up being: ${0} ", finalPrice);

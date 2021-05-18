@@ -8,7 +8,7 @@ namespace Bakery.Models
     {
       pQuantity = 0;
     }
-    public int GetPastryCost(int pQuantity)
+    public static int GetPastryCost(int pQuantity)
     {
       int pPrice = 2;
       int discountNum = pQuantity / 3;

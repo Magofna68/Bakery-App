@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BakeryNameSpace;
+using Bakery.Models;
 
 namespace BakeryNameSpaceTests
 {
@@ -13,7 +13,7 @@ namespace BakeryNameSpaceTests
       int breadCost = 5;
       int expectedCost = 5;
 
-      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(1);
+      int totalBreadCost = Bakery.Models.Bread.GetBreadCost(1);
 
       Assert.AreEqual(expectedCost, totalBreadCost);
     }
@@ -24,7 +24,7 @@ namespace BakeryNameSpaceTests
       int value;
       int breadCost = 5;
       int expectedCost = 10;
-      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(2);
+      int totalBreadCost = Bakery.Models.Bread.GetBreadCost(2);
       Assert.AreEqual(expectedCost, totalBreadCost);
     }
 
@@ -34,7 +34,7 @@ namespace BakeryNameSpaceTests
       int value;
       int breadCost = 5;
       int expectedCost = 10;
-      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(3);
+      int totalBreadCost = Bakery.Models.Bread.GetBreadCost(3);
       Assert.AreEqual(expectedCost, totalBreadCost);
     }
 
@@ -44,7 +44,7 @@ namespace BakeryNameSpaceTests
       int value;
       int breadCost = 5;
       int expectedCost = 30;
-      int totalBreadCost = BakeryNameSpace.BreadCost.GetBreadCost(8);
+      int totalBreadCost = Bread.GetBreadCost(8);
       Assert.AreEqual(expectedCost, totalBreadCost);
     }
   }
@@ -59,7 +59,7 @@ namespace BakeryNameSpaceTests
       int pastryCost = 2;
       int expectedCost = 2;
 
-      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(1);
+      int totalPastryCost = Bakery.Models.Pastry.GetPastryCost(1);
 
       Assert.AreEqual(expectedCost, totalPastryCost);
     }
@@ -71,7 +71,7 @@ namespace BakeryNameSpaceTests
       int pastryCost = 2;
       int expectedCost = 15;
 
-      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(9);
+      int totalPastryCost = Bakery.Models.Pastry.GetPastryCost(9);
 
       Assert.AreEqual(expectedCost, totalPastryCost);
     }
@@ -83,7 +83,7 @@ namespace BakeryNameSpaceTests
       int pastryCost = 2;
       int expectedCost = 12;
 
-      int totalPastryCost = BakeryNameSpace.PastryCost.GetPastryCost(7);
+      int totalPastryCost = Bakery.Models.Pastry.GetPastryCost(7);
 
       Assert.AreEqual(expectedCost, totalPastryCost);
     }

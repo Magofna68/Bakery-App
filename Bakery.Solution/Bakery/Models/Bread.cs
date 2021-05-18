@@ -9,7 +9,7 @@ namespace Bakery.Models
     {
       breadNum = 0;
     }
-    public int GetBreadCost(int breadNum)
+    public static int GetBreadCost(int breadNum)
     {
       int breadPrice = 5;
       int totalFree = breadNum / 3;
